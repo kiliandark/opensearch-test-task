@@ -441,32 +441,36 @@ Logstash ожидает, что конфигурационный файл буд
 - в OpenSearch Dashboards был создан Index Pattern для того, чтобы Dashboards знал, где искать логи;  
 
     <div align="center">
-  <img src="screenshots/index_pattern.png" alt="Index Pattern Configuration" width="600">
-  <p><em>Рис. 1: Index Pattern в OpenSearch Dashboards</em></p>
+  <img src="screenshots/index_pattern.png" alt="Index Pattern Configuration" width="600" style="border: 1px solid #eee; border-radius: 8px;">
+  <p><em>Рис. 1 — Index Pattern в OpenSearch Dashboards</em></p>
 </div>
   
 - создан ряд визуализаций (metric, pie, data table, line, vertical bar);  
 
-  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-  <div style="flex: 1; min-width: 30%;">
-    <img src="screenshots/visualizations.png" alt="Перечень визуализаций" style="width:100%">
-    <p align="center"><em>Рис. 1: Перечень визуализаций</em></p>
+<div align="center" style="max-width: 100%;">
+  
+  <div style="margin: 20px 0;">
+    <img src="screenshots/visualizations.png" alt="Visualizations" width="600" style="max-width: 100%; border: 1px solid #eee; border-radius: 8px;">
+    <p><em>Рис. 2 — Перечень визуализаций</em></p>
   </div>
-  <div style="flex: 1; min-width: 30%;">
-    <img src="screenshots/visualization_2.png" alt="Визуализация HHTTP Status Distribution" style="width:100%">
-    <p align="center"><em>Рис. 2: Визуализация HHTTP Status Distribution № 1</em></p>
+  
+   <div style="margin: 20px 0;">
+    <img src="screenshots/visualization_2.png" alt="HTTP Status" width="600" style="max-width: 100%; border: 1px solid #eee; border-radius: 8px;">
+    <p><em>Рис. 3 — Визуализация HTTP Status Distribution № 1</em></p>
   </div>
-  <div style="flex: 1; min-width: 30%;">
-    <img src="screenshots/visualization_2.1.png" alt="Визуализация HHTTP Status Distribution № 2" style="width:100%">
-    <p align="center"><em>Рис. 3: Визуализация HHTTP Status Distribution № 2</em></p>
+  
+   <div style="margin: 20px 0;">
+    <img src="screenshots/visualization_2.1.png" alt="HTTP Details" width="600" style="max-width: 100%; border: 1px solid #eee; border-radius: 8px;">
+    <p><em>Рис. 4 — Визуализация HTTP Status Distribution № 2</em></p>
   </div>
 </div>
 
-
-  
 - настроены фильтры для выбора конкретной категории или элемента для анализа (например, так: field - response, operator - is between 300/400);
 
- ![Index Pattern](filter.png)
+  <div align="center">
+  <img src="screenshots/filter.png" alt="filter" width="600">
+  <p><em>Рис. 5 — Применение фильтра к визуализации HHTTP Status Distribution</em></p>
+</div>
  
 - - использована цветовая раскраска для улучшения восприятия;  
 - создан дашборд, в который были добавлены все ранее подготовленные визуализации с настройкой фильтров уже в рамках дашборда.
