@@ -429,7 +429,7 @@ PS C:\Users\Dmitry> curl.exe -XGET "http://localhost:9200/apache-logs-*/_search?
 ```
 Logstash ожидает, что конфигурационный файл будет содержать как минимум одну из секций: input, filter, output, как раз в этом логе ошибка Expected one of [ \t\r\n], "#", "input", "filter", "output" говорит, что файл либо пустой, либо содержит недопустимые символы в начале. Решением для подобных ошибок были проверки содержимого файла конфигурации, кодировки UTF-8 без BOM, отсутствия скрытых символов и т.д. 
 
-Были ошибки – конфликты портов, потому что Logstash использует порт 9600 для API, который может конфликтовать с другими сервисами, такимии как Doker Desktop.   
+Были ошибки – конфликты портов, потому что Logstash использует порт 9600 для API, который может конфликтовать с другими сервисами, такимии как Docker Desktop.   
 Вот пример такого лога: 
 ```powershell
 [2025-08-02T19:46:01,079][INFO ][logstash.agent ] Successfully started Logstash API endpoint {:port=>9600, :ssl_enabled=>false} [2025-08-02T19:46:01,097][INFO ][logstash.runner ] Logstash shut down. [2025-08-02T19:46:01,109][FATAL][org.logstash.Logstash ] Logstash stopped processing because of an error: (SystemExit) exit
