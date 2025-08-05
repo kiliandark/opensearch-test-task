@@ -440,14 +440,35 @@ Logstash ожидает, что конфигурационный файл буд
 
 - в OpenSearch Dashboards был создан Index Pattern для того, чтобы Dashboards знал, где искать логи;  
 
-   ![Index Pattern](screenshots/index_pattern.png)
+    <div align="center">
+  <img src="screenshots/index_pattern.png" alt="Index Pattern Configuration" width="600">
+  <p><em>Рис. 1: Index Pattern в OpenSearch Dashboards</em></p>
+</div>
   
 - создан ряд визуализаций (metric, pie, data table, line, vertical bar);  
 
- ![Index Pattern](screenshots/index_pattern.png)
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+  <div style="flex: 1; min-width: 30%;">
+    <img src="screenshots/visualizations.png" alt="Перечень визуализаций" style="width:100%">
+    <p align="center"><em>Рис. 1: Перечень визуализаций</em></p>
+  </div>
+  <div style="flex: 1; min-width: 30%;">
+    <img src="screenshots/visualization_2.png" alt="Визуализация HHTTP Status Distribution" style="width:100%">
+    <p align="center"><em>Рис. 2: Визуализация HHTTP Status Distribution № 1</em></p>
+  </div>
+  <div style="flex: 1; min-width: 30%;">
+    <img src="screenshots/visualization_2.1.png" alt="Визуализация HHTTP Status Distribution № 2" style="width:100%">
+    <p align="center"><em>Рис. 3: Визуализация HHTTP Status Distribution № 2</em></p>
+  </div>
+</div>
+
+
   
-- настроены фильтры для выбора конкретной категории или элемента для анализа (например, так: field - response, operator - is between 300/400);  
-- использована цветовая раскраска для улучшения восприятия;  
+- настроены фильтры для выбора конкретной категории или элемента для анализа (например, так: field - response, operator - is between 300/400);
+
+ ![Index Pattern](filter.png)
+ 
+- - использована цветовая раскраска для улучшения восприятия;  
 - создан дашборд, в который были добавлены все ранее подготовленные визуализации с настройкой фильтров уже в рамках дашборда.
 
   
