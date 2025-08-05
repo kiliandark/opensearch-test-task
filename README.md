@@ -63,7 +63,7 @@ docker run -d --name opensearch-dashboards -p 5601:5601 `
   -e OPENSEARCH_DASHBOARDS_OPENSEARCH_URL=http://opensearch-server:9200 `
   bitnami/opensearch-dashboards:latest
 ```
-после этих команл был успешно запущен localhost:5601.  
+после этих команд был успешно запущен localhost:5601.  
 
  
  ### 4) **Установка, настройка и сбор данных Logstash:**
