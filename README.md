@@ -472,8 +472,25 @@ Logstash ожидает, что конфигурационный файл буд
   <p><em>Рис. 5 — Применение фильтра к визуализации HHTTP Status Distribution</em></p>
 </div>
  
-- - использована цветовая раскраска для улучшения восприятия;  
+- использована цветовая раскраска для улучшения восприятия;
+
+  <div align="center">
+  <img src="screenshots/visualization_1.png" alt="Index Pattern Configuration" width="600" style="border: 1px solid #eee; border-radius: 8px;">
+  <p><em>Рис. 6 — Применение цветовой раскраски</em></p>
+</div>
+     
 - создан дашборд, в который были добавлены все ранее подготовленные визуализации с настройкой фильтров уже в рамках дашборда.
+
+  <div align="center">
+  <img src="screenshots/dashboard_1.png" alt="Index Pattern Configuration" width="600" style="border: 1px solid #eee; border-radius: 8px;">
+  <p><em>Рис. 7 — Пример дашборда № 1 </em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/dashboard_2.png" alt="Index Pattern Configuration" width="600" style="border: 1px solid #eee; border-radius: 8px;">
+  <p><em>Рис. 7 — Пример дашборда № 2 </em></p>
+</div>
+
 
   
 
