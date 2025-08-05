@@ -39,7 +39,14 @@ docker run -d \
 - было необходимо настроить переменные окружения, такие как: opensearch_password, opensearch_cluster_name, opensearch_heap_size, opensearch_enable_security и т.д.  
 Пример настройки для opensearch_password: 
 ```powershell
-docker run -d --name opensearch-server -p 9200:9200 -p 9300:9300 --network app-tier -e OPENSEARCH_PASSWORD=mysecurepassword -v opensearch_data:/bitnami/opensearch bitnami/opensearch:latest
+docker run -d \
+  --name opensearch-server \
+  -p 9200:9200 \
+  -p 9300:9300 \
+  --network app-tier \
+  -e OPENSEARCH_PASSWORD=mysecurepassword \
+  -v opensearch_data:/bitnami/opensearch \
+  bitnami/opensearch:latest
 ```
 Итогом настройки OpenSearch было успешное подключение к localhost:9200.
 
