@@ -427,7 +427,11 @@ PS C:\Users\Dmitry> curl.exe -XGET "http://localhost:9200/apache-logs-*/_search?
 ```powershell
 [2025-08-02T19:36:42,300][ERROR][logstash.agent ] Failed to execute action {:action=>LogStash::PipelineAction::Create/pipeline_id:main, :exception=>"LogStash::ConfigurationError", :message=>"Expected one of [ \\t\\r\\n], \"#\", \"input\", \"filter\", \"output\" at line 1, column 1 (byte 1)", :backtrace=>["/opt/bitnami/logstash/logstash-core/lib/logstash/compiler.rb:32:in `compile_imperative'", "org/logstash/execution/AbstractPipelineExt.java:285:in `initialize'", "org/logstash/execution/AbstractPipelineExt.java:223:in `initialize'", "/opt/bitnami/logstash/logstash-core/lib/logstash/java_pipeline.rb:47:in `initialize'", "org/jruby/RubyClass.java:950:in `new'", "/opt/bitnami/logstash/logstash-core/lib/logstash/pipeline_action/create.rb:50:in `execute'", "/opt/bitnami/logstash/logstash-core/lib/logstash/agent.rb:431:in `block in converge_state'"]}
 ```
-Logstash ожидает, что конфигурационный файл будет содержать как минимум одну из секций: input, filter, output, как раз в этом логе ошибка Expected one of [ \t\r\n], "#", "input", "filter", "output" говорит, что файл либо пустой, либо содержит недопустимые символы в начале. Решением для подобных ошибок были проверки содержимого файла конфигурации, кодировки UTF-8 без BOM, отсутствия скрытых символов и т.д. 
+Logstash ожидает, что конфигурационный файл будет содержать как минимум одну из секций: input, filter, output, как раз в этом логе ошибка:  
+```powershell
+Expected one of [ \t\r\n], "#", "input", "filter", "output"
+```
+говорит, что файл либо пустой, либо содержит недопустимые символы в начале. Решением для подобных ошибок были проверки содержимого файла конфигурации, кодировки UTF-8 без BOM, отсутствия скрытых символов и т.д. 
 
 Были ошибки – конфликты портов, потому что Logstash использует порт 9600 для API, который может конфликтовать с другими сервисами, такимии как Docker Desktop.   
 Вот пример такого лога: 
