@@ -82,7 +82,7 @@ mkdir C:\docker\logstash\data
 - поместил разархивированный access.log в C:\docker\logstash\data\;  
 - создал при помощи Notepad++ logstash.conf в C:\docker\logstash\pipeline\. Важными деталями являлось сохранять файл в кодировке UTF-8 без BOM с переносами строк в формате LF (Unix), а не CRLF (Windows);  
 - отмечу, что команда **docker logs -f logstash** использовалась чаще остальных при выполнении данного задания, поскольку количество ошибок при конфигурации logstash.conf легко превысило десятки, а может и сотни. Об основных проблемах при настройке logstash.conf будет упомянуто в отдельном пункте;  
-- выполнил тестовый запрос к OpenSearch, по итогам которого было найдено более 10,000 записей, создан индекс apache-logs-1995.07.01, а также такие поля как client, method, response, request, bytes, @timestamp корректно распарсяны:
+- выполнил тестовый запрос к OpenSearch, по итогам которого было найдено более 10,000 записей, создан индекс apache-logs-1995.07.01, а также такие поля как client, method, response, request, bytes, @timestamp корректно распаршены:
   
 ```powershell
 PS C:\Users\Dmitry> curl.exe -XGET "http://localhost:9200/apache-logs-*/_search?pretty" -u admin:admin
