@@ -78,7 +78,7 @@ mkdir C:\docker\logstash
 mkdir C:\docker\logstash\pipeline
 mkdir C:\docker\logstash\data
 ```
-- скачан датасет ***https://www.kaggle.com/datasets/eliasdabbas/web-server-access-logs*** в котором логи соответствуют стандартному формату Apache Common Log Format (CLF), что полностью совмещается с будущим Grok-фильтром; 
+- скачан датасет с Kaggle ***https://www.kaggle.com/datasets/eliasdabbas/web-server-access-logs*** в котором логи соответствуют стандартному формату Apache Common Log Format (CLF), что полностью совмещается с будущим Grok-фильтром; 
 - поместил разархивированный access.log в C:\docker\logstash\data\;  
 - создал при помощи Notepad++ logstash.conf в C:\docker\logstash\pipeline\. Важными деталями являлось сохранять файл в кодировке UTF-8 без BOM с переносами строк в формате LF (Unix), а не CRLF (Windows);  
 - отмечу, что команда **docker logs -f logstash** использовалась чаще остальных при выполнении данного задания, поскольку количество ошибок при конфигурации logstash.conf легко превысило десятки, а может и сотни. Об основных проблемах при настройке logstash.conf будет упомянуто в отдельном пункте;  
