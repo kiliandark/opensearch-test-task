@@ -473,7 +473,7 @@ Expected one of [ \t\r\n], "#", "input", "filter", "output"
 
   <div align="center">
   <img src="screenshots/filter.png" alt="filter" width="600">
-  <p><em>Рис. 5 — Применение фильтра к визуализации HHTTP Status Distribution</em></p>
+  <p><em>Рис. 5 — Применение фильтра к визуализации HTTP Status Distribution</em></p>
 </div>
  
 - использована цветовая раскраска для улучшения восприятия;
